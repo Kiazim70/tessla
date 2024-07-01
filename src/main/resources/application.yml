@@ -1,0 +1,21 @@
+
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/stockdb
+    password: postgres
+    username: postgres
+  jpa:
+    #    properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL94Dialect
+      ddl-auto: update
+      show-sql: true
+  mvc:
+    path match:
+      matching-strategy: ANT_PATH_MATCHER
+
+server:
+  port:
+    8080
